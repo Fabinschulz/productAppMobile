@@ -30,7 +30,7 @@ Este é um aplicativo CRUD (Create, Read, Update, Delete) de cadastro de produto
 
 - [Documentação do MAUI](https://docs.microsoft.com/dotnet/maui/)
 - [Documentação do Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/)
-- [Tutorial de Início Rápido do MAUI](https://docs.microsoft.com/dotnet/maui/get-started/)
+- [Tutorial de Início Rápido do MAUI](https://learn.microsoft.com/pt-br/training/modules/build-mobile-and-desktop-apps/1-introduction)
 
 ## Contribuição
 
