@@ -8,6 +8,14 @@ Este é um aplicativo CRUD (Create, Read, Update, Delete) de cadastro de produto
 - MAUI
 - .NET 7
 
+## Dicas
+### Por favor, consulte a documentação abaixo para garantir que todas as configurações necessárias estejam instaladas para executar o aplicativo com sucesso.
+
+```
+- [MAUI check](https://github.com/Redth/dotnet-maui-check)
+
+```
+
 ## Instalação
 
 1. Clone este repositório:
