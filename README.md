@@ -13,18 +13,14 @@ Este é um aplicativo CRUD (Create, Read, Update, Delete) de cadastro de produto
 
 ```
 - [MAUI check](https://github.com/Redth/dotnet-maui-check)
-
 ```
 
 ## Instalação
 
-1. Clone este repositório:
-
 ```bash
-[git clone https://github.com/Fabinschulz/ProductAppMAUI.git]
-
-1 - Abra o projeto no Visual Studio.
-2 - Execute o aplicativo em seu emulador ou dispositivo MAUI.
+1. Clone este repositório: [git clone https://github.com/Fabinschulz/ProductAppMAUI.git]
+2 - Abra o projeto no Visual Studio.
+3 - Execute o aplicativo em seu emulador ou dispositivo MAUI.
 ````
 ## Dependências
 
