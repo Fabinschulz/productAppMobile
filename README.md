@@ -9,7 +9,7 @@ Este é um aplicativo CRUD (Create, Read, Update, Delete) de cadastro de produto
 - .NET 7
 
 ## Dicas
-### Por favor, consulte a documentação abaixo para garantir que todas as configurações necessárias estejam instaladas para executar o aplicativo com sucesso.
+#### Consulte a documentação abaixo para garantir que todas as configurações necessárias estejam instaladas para executar o aplicativo com sucesso.
 
 ```
 - [MAUI check](https://github.com/Redth/dotnet-maui-check)
@@ -26,6 +26,11 @@ Este é um aplicativo CRUD (Create, Read, Update, Delete) de cadastro de produto
 1 - Abra o projeto no Visual Studio.
 2 - Execute o aplicativo em seu emulador ou dispositivo MAUI.
 ````
+## Dependências
+
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.Sqlite
+- CommunityToolkit.Mvvm
 
 ## Uso
 
