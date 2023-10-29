@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductAppMAUI.Views.ProductPage"
+             Title="{Binding Title}">
+    
+    <VerticalStackLayout Padding="15">
+        <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" Color="Black" HeightRequest="30" />
+   
+        <Label Text="Nome do Produto" FontSize="24" />
+        <Entry Text="{Binding ProductDTO.Name}" Margin="0,0,0,10"/>
+
+        <Label Text="Descrição do produto" FontSize="24" />
+        <Entry Text="{Binding ProductDTO.Description}" x:Name="Description" Placeholder="Insira a descrição do produto" Margin="0,0,0,10"/>
+
+        <Label Text="Preço do produto" FontSize="24" />
+        <Entry x:Name="Price" Placeholder="Insira o preço do produto" Text="{Binding ProductDTO.Price}" Keyboard="Numeric" Margin="0,0,0,10"/>
+        
+        <Button Text="Salvar" Command="{Binding CreateCommand}" BackgroundColor="#9747FF"/>
+    </VerticalStackLayout>
+</ContentPage>

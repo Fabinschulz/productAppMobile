@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:ProductAppMAUI.Domain.DTOs"
+             x:Class="ProductAppMAUI.Views.ProductList"
+             Title="Lista de Produtos">
+  
+        <Grid RowDefinitions="Auto,Auto,*" RowSpacing="15" Margin="15">
+        <Button
+             Grid.Row="0"
+             Text="Cadastrar Produto"
+             Command="{Binding AddProductCommand}" />
+        <Label Grid.Row="1" Text="Lista de Produtos" FontSize="Subtitle"/>
+
+            <ScrollView Grid.Row="2">
+                <CollectionView ItemsSource="{Binding ProductsList}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="5" Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:ProductDTO">
+                            <Border Padding="10,5" HorizontalOptions="FillAndExpand">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="5" />
+                                </Border.StrokeShape>
+
+                                <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*">
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Produto" FontAttributes="Bold" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" HorizontalOptions="End" />
+
+                                    <Label Grid.Row="1" Grid.Column="0" Text="Descrição" FontAttributes="Bold" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Description}" HorizontalOptions="End" />
+
+                                    <Label Grid.Row="2" Grid.Column="0" Text="Preço" FontAttributes="Bold" />
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Price, StringFormat='{0:C}'}" HorizontalOptions="End" />
+
+                                    <Button 
+                                Grid.Row="3"
+                                Grid.Column="0" 
+                                Text="Editar" 
+                                Command="{Binding EditCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
+                                CommandParameter="{Binding Id}" />
+
+                                    <Button 
+                                Grid.Row="4"
+                                Grid.Column="1" 
+                                Text="Excluir" 
+                                Command="{Binding DeleteCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}}"
+                                CommandParameter="{Binding Id}" />
+
+                                </Grid>
+                            </Border>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </Grid>
+
+</ContentPage>
