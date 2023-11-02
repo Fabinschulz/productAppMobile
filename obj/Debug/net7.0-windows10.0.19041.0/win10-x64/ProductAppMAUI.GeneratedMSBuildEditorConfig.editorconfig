@@ -28,6 +28,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = ProductAppMAUI.MainPage.xa
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
+[C:/Users/Fabio Uy3/Desktop/my-apps/ProductAppMAUI/Mvvm/Views/ProductList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProductAppMAUI.Mvvm.Views.ProductList.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\ProductList.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\ProductList.xaml
+
+[C:/Users/Fabio Uy3/Desktop/my-apps/ProductAppMAUI/Mvvm/Views/ProductPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProductAppMAUI.Mvvm.Views.ProductPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mvvm\Views\ProductPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mvvm\Views\ProductPage.xaml
+
 [C:/Users/Fabio Uy3/Desktop/my-apps/ProductAppMAUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ProductAppMAUI.Resources.Styles.Colors.xaml
@@ -39,15 +51,3 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ProductAppMAUI.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
-
-[C:/Users/Fabio Uy3/Desktop/my-apps/ProductAppMAUI/Views/ProductList.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ProductAppMAUI.Views.ProductList.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\ProductList.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\ProductList.xaml
-
-[C:/Users/Fabio Uy3/Desktop/my-apps/ProductAppMAUI/Views/ProductPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ProductAppMAUI.Views.ProductPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\ProductPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\ProductPage.xaml

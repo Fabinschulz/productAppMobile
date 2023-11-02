@@ -29,6 +29,7 @@ namespace ProductAppMAUI
             builder.Services.AddTransient<ProductList>();
             builder.Services.AddTransient<ProductListViewModel>();
 
+            Routing.RegisterRoute(nameof(ProductPage), typeof(ProductPage));
 
 #if DEBUG
             builder.Logging.AddDebug();

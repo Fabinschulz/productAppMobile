@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductAppMAUI.Views.ProductPage"
+             Shell.BackgroundColor="#18171E"
+             Title="{Binding Title}"
+             BackgroundColor="Black">
+    
+    <VerticalStackLayout Padding="15">
+        <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" Color="White" HeightRequest="30" />
+   
+        <Label Text="Nome do Produto" FontSize="24" TextColor="White"/>
+        <Entry Text="{Binding ProductDTO.Name}" 
+               Margin="0,0,0,10" 
+               TextColor="White"
+               Background="#18171E" />
+
+        <Label Text="Descrição do produto" FontSize="24" TextColor="White"/>
+        <Editor Text="{Binding ProductDTO.Description}"
+                x:Name="Description"
+                Placeholder="Insira a descrição do produto"
+                Margin="0,0,0,10"
+                TextColor="White"
+                Background="#18171E"
+                HeightRequest="100" />
+
+
+
+        <Label Text="Preço do produto" FontSize="24" TextColor="White" />
+        <Entry x:Name="Price" 
+               Placeholder="Insira o preço do produto" 
+               Text="{Binding ProductDTO.Price}" 
+               Keyboard="Numeric" 
+               TextColor="White" 
+               Margin="0,0,0,10" 
+               Background="#18171E"/>
+
+        <Button Text="Salvar" Command="{Binding CreateCommand}" BackgroundColor="#8257E5" Margin="0,25" />
+
+        <Label Text="{Binding Message}" TextColor="#8257E5" FontSize="16" />
+    </VerticalStackLayout>
+</ContentPage>

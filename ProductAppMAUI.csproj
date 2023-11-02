@@ -56,10 +56,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\ProductList.xaml">
+	  <MauiXaml Update="Mvvm\Views\ProductList.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ProductPage.xaml">
+	  <MauiXaml Update="Mvvm\Views\ProductPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

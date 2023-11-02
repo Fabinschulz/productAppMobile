@@ -14,8 +14,7 @@ steps:
     inputs:
       command: build
       projects: "**/ProductAppMAUI/ProductAppMAUI.csproj"
-      arguments: "--configuration $(BuildConfiguration)"
-    continueOnError: true
+      arguments: "-c Release"
 
   - task: DotNetCoreCLI@2
     displayName: "Build ProductAppMAUI.Android"
@@ -25,53 +24,31 @@ steps:
       arguments: "--configuration $(BuildConfiguration)"
     continueOnError: true
 
-  - task: DotNetCoreCLI@2
-    displayName: "Build ProductAppMAUI.iOS"
+  - task: CopyFiles@2
+    displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)/ProductAppMAUI'
     inputs:
-      command: build
-      projects: "**/ProductAppMAUI/ProductAppMAUI.iOS.csproj"
-      arguments: "--configuration $(BuildConfiguration)"
-    continueOnError: true
-
-   - task: PublishPipelineArtifact@1
-      inputs:
-        targetPath: '$(Build.SourcesDirectory)/ProductAppMAUI/bin/$(BuildConfiguration)/net6.0-android/ProductAppMAUI.dll'
-        artifact: 'ProductAppMAUI'
-        publishLocation: 'pipeline'
-        artifactName: 'ProductAppMAUI'
-        condition: succeededOrFailed()
-
-    - task: PublishPipelineArtifact@1
-      inputs:
-        targetPath: '$(Build.SourcesDirectory)/ProductAppMAUI/bin/$(BuildConfiguration)/net6.0-ios/ProductAppMAUI.dll'
-        artifact: 'ProductAppMAUI'
-        publishLocation: 'pipeline'
-        artifactName: 'ProductAppMAUI'
-        condition: succeededOrFailed()
-    
-    - task: CopyFiles@2
-      inputs:
         SourceFolder: '$(Build.SourcesDirectory)/ProductAppMAUI/bin/$(BuildConfiguration)/net6.0-android'
         Contents: '**'
         TargetFolder: '$(Build.ArtifactStagingDirectory)/ProductAppMAUI'
         CleanTargetFolder: true
         OverWrite: true
         flattenFolders: true
-        condition: succeededOrFailed()
+    condition: succeededOrFailed()
 
-    - task: CopyFiles@2
-      inputs:
-        SourceFolder: '$(Build.SourcesDirectory)/ProductAppMAUI/bin/$(BuildConfiguration)/net6.0-ios'
-        Contents: '**'
-        TargetFolder: '$(Build.ArtifactStagingDirectory)/ProductAppMAUI'
-        CleanTargetFolder: true
-        OverWrite: true
-        flattenFolders: true
-        condition: succeededOrFailed()
-
-    - task: PublishBuildArtifacts@1
-      inputs:
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifacts'
+    inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)/ProductAppMAUI'
         ArtifactName: 'ProductAppMAUI'
         publishLocation: 'Container'
-        condition: succeededOrFailed()
+    condition: succeededOrFailed()
+
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish Pipeline Artifact: ProductAppMAUI'
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/ProductAppMAUI/bin/$(BuildConfiguration)/net6.0-android/ProductAppMAUI.dll'
+      publishLocation: 'pipeline'
+      artifactName: 'ProductAppMAUI'
+    condition: succeededOrFailed()
+
+

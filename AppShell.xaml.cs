@@ -7,7 +7,6 @@ namespace ProductAppMAUI
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ProductPage), typeof(ProductPage));
         }
     }
 }
